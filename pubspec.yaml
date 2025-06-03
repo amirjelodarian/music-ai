@@ -1,5 +1,5 @@
-name: emotion_music_ai
-description: A Flutter app that adapts music to your emotions.
+name: emotion_music_v2
+description: A Flutter project using Android V2 embedding
 publish_to: "none"
 version: 1.0.0+1
 

@@ -1,6 +1,6 @@
 workflows:
   build-apk:
-    name: Build Android APK
+    name: Build APK
     max_build_duration: 10
     environment:
       flutter: stable

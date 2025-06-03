@@ -14,10 +14,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Emotion Music AI')),
         body: const Center(
-          child: Text(
-            'Welcome to Emotion Music AI!',
-            style: TextStyle(fontSize: 24),
-          ),
+          child: Text('Welcome to Emotion Music AI!', style: TextStyle(fontSize: 24)),
         ),
       ),
     );
