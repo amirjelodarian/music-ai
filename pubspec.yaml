@@ -1,13 +1,19 @@
-
-name: emotion_music_app
-description: A music app that responds to your emotion.
+name: emotion_music_ai
+description: A Flutter app that adapts music to your emotions.
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
     sdk: flutter
 
 flutter:
