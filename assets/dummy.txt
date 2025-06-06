@@ -1,1 +1,0 @@
-Dummy file to ensure assets folder exists.
