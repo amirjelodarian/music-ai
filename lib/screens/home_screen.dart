@@ -13,7 +13,9 @@ class HomeScreen extends StatelessWidget {
           children: [
             const Text("Welcome to EmotionBeat!"),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // TODO: Navigate to analysis screen
+              },
               child: const Text("Analyze Song"),
             ),
           ],
