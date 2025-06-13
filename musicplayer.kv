@@ -1,0 +1,66 @@
+#:kivy 2.0.0
+#:import dp kivy.metrics.dp
+
+<MusicPlayer>:
+    orientation: 'vertical'
+    padding: dp(10)
+    spacing: dp(10)
+
+    MDTopAppBar:
+        title: "Music Player"
+        elevation: 10
+
+    MDCard:
+        size_hint: 0.9, None
+        height: dp(50)
+        pos_hint: {"center_x": 0.5}
+        MDLabel:
+            text: root.song_name
+            halign: "center"
+
+    MDRaisedButton:
+        text: "Select Song"
+        pos_hint: {"center_x": 0.5}
+        on_release: root.select_song()
+
+    MDCard:
+        size_hint: 0.9, None
+        height: dp(100)
+        pos_hint: {"center_x": 0.5}
+        orientation: 'vertical'
+        MDLabel:
+            text: "Mood: " + root.mood
+            halign: "center"
+        MDLabel:
+            text: "Genre: " + root.genre
+            halign: "center"
+
+    MDLabel:
+        text: "Recommendations: " + root.recommendations
+        halign: "center"
+        size_hint_y: None
+        height: dp(50)
+
+    MDBoxLayout:
+        size_hint_y: None
+        height: dp(60)
+        pos_hint: {"center_x": 0.5}
+        MDFloatingActionButton:
+            icon: "play-arrow"
+            on_release: root.play_song()
+            disabled: root.song_name == "No song selected"
+        MDFloatingActionButton:
+            icon: "pause"
+            on_release: root.pause_song()
+            disabled: root.song_name == "No song selected"
+        MDFloatingActionButton:
+            icon: "stop"
+            on_release: root.stop_song()
+            disabled: root.song_name == "No song selected"
+
+    MDSpinner:
+        id: spinner
+        size_hint: None, None
+        size: dp(46), dp(46)
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        active: False
